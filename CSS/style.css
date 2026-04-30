@@ -1,23 +1,23 @@
-/* 1. Tüm sayfanın arka planını açık mavi yap */
-body {
-    background-color: #c60d44 !important;
+
+body.tasarım{
+    background-color: #c66b86 !important;
 }
 
 h1, h2, h3 {
-    color: #0c5042 !important;
+    color: #070707 !important;
 }
 
 
 /* Navbar'ın arka planını değiştir */
 .navbar {
-    background-color: #7d6642 !important; 
+    background-color: #ffffff !important; 
     border-bottom: 3px solid #8d4747;     /* Altına bir mor çizgi */
 }
 
 /*  Menü linklerini*/
 .navbar-brand, 
 .nav-link {
-    color: #164c42 !important; 
+    color: #112c4c !important; 
     font-weight: 500;      
 }
 
@@ -25,4 +25,46 @@ h1, h2, h3 {
 .nav-link:hover {
     color: #ffffff !important;            /* Üzerine gelince beyaz olsun */
     text-shadow: 0 0 5px #c77dff;         /* Hafif parlama efekti */
+}
+
+/* Özgeçmiş (CV) Sayfası Özel Stilleri */
+body.cv{
+
+    
+    /* Resim yüklenmezse diye yedek bir renk */
+    background-color: #da9ac6 !important;
+
+}
+
+.baslik {
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+    color: #6e3a10; 
+}
+
+.baslik::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 220px; 
+    height: 3px; 
+    background-color: #0b78ab; 
+}
+
+.bilgi-kutusu {
+    background-color: white;
+    padding: 50px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    max-width:700px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.text-center-custom {
+    text-align: center;
 }
