@@ -3,15 +3,43 @@ body.tasarım{
     background-color: #c66b86 !important;
 }
 
+
+.hobi-kutu {
+    margin-left: auto;
+    margin-right: 0;
+    background-color: #ffffff;
+    border-right: 5px solid #8d4747; 
+}
+
+
+.profil-kutu {
+    margin-right: auto;
+    margin-left: 0;
+    text-align: left; 
+}
+
+.profil-img {
+    background-color: #ffffff;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit:scale-down;
+    border: 6px solid white;
+}
+
+.hobi-icerik p {
+    text-align: center;
+    margin-bottom: 15px;
+}
 h1, h2, h3 {
     color: #070707 !important;
 }
 
 
-/* Navbar'ın arka planını değiştir */
+
 .navbar {
     background-color: #ffffff !important; 
-    border-bottom: 3px solid #8d4747;     /* Altına bir mor çizgi */
+    border-bottom: 3px solid #8d4747;   
 }
 
 /*  Menü linklerini*/
@@ -21,10 +49,12 @@ h1, h2, h3 {
     font-weight: 500;      
 }
 
-/*  Linklerin üzerine gelince (hover) efekti */
 .nav-link:hover {
     color: #ffffff !important;            /* Üzerine gelince beyaz olsun */
     text-shadow: 0 0 5px #c77dff;         /* Hafif parlama efekti */
+}
+body.sehir{
+    background-color:#da9ac6;
 }
 
 /* Özgeçmiş (CV) Sayfası Özel Stilleri */
