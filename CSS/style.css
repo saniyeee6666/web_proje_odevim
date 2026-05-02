@@ -1,6 +1,6 @@
 
 body.tasarım{
-    background-color: #c66b86 !important;
+    background-color: #da9ac6 !important;
 }
 
 
@@ -55,6 +55,29 @@ h1, h2, h3 {
 }
 body.sehir{
     background-color:#da9ac6;
+}
+
+.resim-cerceve {
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    
+
+    max-width: 700px; 
+    margin: 20px auto; 
+    overflow: hidden; /* Taşmaları engeller */
+}
+.resim-cerceve h5{
+    font-style:italic;
+}
+
+/* Çerçeve içindeki resimleri sabitleyen asıl kısım */
+.resim-cerceve img {
+    width: 100%;       /* Kutunun genişliğine yayıl */
+    height: 450px;     /* Yüksekliği hepsinde aynı yap (Veya istediğin bir değer) */
+    object-fit: cover; /* RESMİ BOZMADAN, en iyi şekilde sığdır (Kırpma yapar ama basıklaştırmaz) */
+    display: block;
+    border-radius: 10px;
 }
 
 /* Özgeçmiş (CV) Sayfası Özel Stilleri */
