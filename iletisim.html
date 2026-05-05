@@ -11,42 +11,57 @@
 
 </head>
 
-<body class="bg-white p-5">
+<body class="iletisim">
+    
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Saniye Topal</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Hakkında</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="sehir.html">Şehrim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div id="app" class="form karti">
         <h3 class="text-center">İletişim Formu</h3>
-        <form id="iletişim_form" action="gonder.php" method="POST">
+        <form id="iletisim_form" action="gonder.php" method="POST">
             <div class="mb-3">
                 <label for="adi">Adınız:</label>
-                <input type="text" id="adi" name="adi" placeholder="Adınızı Giriniz" class="form-kontrol" required>
+                <input type="text" id="adi" name="adi" v-model="form.ad" placeholder="Adınızı Giriniz" class="form-kontrol" required>
             </div>
             <div class="mb-3">
                 <label for="soyadi">Soyadınız:</label>
-                <input type="text" id="soyadi" name="soyadi" placeholder="Soyadınızı Giriniz" class="form-kontrol">
+                <input type="text" id="soyadi" name="soyadi" v-model="form.soyadi" placeholder="Soyadınızı Giriniz" class="form-kontrol">
             </div>
             <div class="mb-3">
                 <label for="e-mail">E-mail:</label>
-                <input type="text" id="e-mail" name="e-mail" placeholder="E-mail Giriniz" class="form-kontrol">
+                <input type="text" id="e-mail" name="e-mail" v-model="form.email" placeholder="E-mail Giriniz" class="form-kontrol">
             </div>
             <div class="mb-3">
                 <label for="telefon">Telefon:</label>
-                <input type="text" id="telefon" name="telefon" pattern="" [0-9]{10,11}
+                <input type="text" id="telefon" name="telefon" v-model="form.telefon" pattern="" [0-9]{10,11}
                     placeholder="Telefon Numaranızı Giriniz" class="form-kontrol">
             </div>
             <label>Şehir:</label>
-            <select name="sehir" class="form-select">
+            <select name="sehir" class="form-select" v-model="form.sehir">
                 <option value="Kocaeli">Kocaeli</option>
                 <option value="Sakarya">Sakarya</option>
                 <option value="İstanbul">İstanbul</option>
             </select>
             <div class="cinsiyet mb-3">
                 <label>Cinsiyet:</label>
-                <input type="radio" name="cinsiyet" value="erkek">Erkek
-                <input type="radio" name="cinsiyet" value="kadin">Kadın
+                <input type="radio" name="cinsiyet" v-model="form.cinsiyet">Erkek
+                <input type="radio" name="cinsiyet" v-model="form.cinsiyet">Kadın
 
             </div>
             <div class="mb-3">
                 <label for="mesaj" class="form-label d-block">Mesajınız:</label>
-                <textarea name="mesaj" rows="3" class="form-kontrol"></textarea>
+                <textarea name="mesaj" rows="3" class="form-kontrol" v-model="form.mesaj"></textarea>
             </div>
             <div class="text-center d-grid gap-2 col-12 mt-4">
                 <input type="button" class="javascript-buton" value="js ile denetle" onclick="validateJs()">

@@ -148,3 +148,6 @@ body.cv{
 .text-center-custom {
     text-align: center;
 }
+body.iletisim{
+    background-color: #da9ac6 !important;
+}
