@@ -6,14 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>İletişim</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <!--framework denetimi için vue.js-->
 
 </head>
 
 <body class="iletisim">
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+    <nav class="navbar navbar-expand-lg ">
         <div class="container">
             <a class="navbar-brand" href="index.html">Saniye Topal</a>
             <div class="collapse navbar-collapse">
@@ -22,29 +23,33 @@
                     <li class="nav-item"><a class="nav-link" href="cv.html">Özgeçmiş</a></li>
                     <li class="nav-item active"><a class="nav-link" href="sehir.html">Şehrim</a></li>
                     <li class="nav-item"><a class="nav-link" href="iletisim.html">İletişim</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Giriş</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div id="app" class="form karti">
+    <div id="app" class="form_karti">
         <h3 class="text-center">İletişim Formu</h3>
-        <form id="iletisim_form" action="gonder.php" method="POST">
+        <form id="iletisim_form" action="gonder.php" method="POST" novalidate>
             <div class="mb-3">
                 <label for="adi">Adınız:</label>
-                <input type="text" id="adi" name="adi" v-model="form.ad" placeholder="Adınızı Giriniz" class="form-kontrol" required>
+                <input type="text" id="adi" name="adi" v-model="form.ad" placeholder="Adınızı Giriniz"
+                    class="form-kontrol" required>
             </div>
             <div class="mb-3">
                 <label for="soyadi">Soyadınız:</label>
-                <input type="text" id="soyadi" name="soyadi" v-model="form.soyadi" placeholder="Soyadınızı Giriniz" class="form-kontrol">
+                <input type="text" id="soyadi" name="soyadi" v-model="form.soyadi" placeholder="Soyadınızı Giriniz"
+                    class="form-kontrol">
             </div>
             <div class="mb-3">
                 <label for="e-mail">E-mail:</label>
-                <input type="text" id="e-mail" name="e-mail" v-model="form.email" placeholder="E-mail Giriniz" class="form-kontrol">
+                <input type="text" id="e-mail" name="email" v-model="form.email" placeholder="E-mail Giriniz"
+                    class="form-kontrol">
             </div>
             <div class="mb-3">
                 <label for="telefon">Telefon:</label>
-                <input type="text" id="telefon" name="telefon" v-model="form.telefon" pattern="" [0-9]{10,11}
+                <input type="text" id="telefon" name="telefon" v-model="form.telefon"
                     placeholder="Telefon Numaranızı Giriniz" class="form-kontrol">
             </div>
             <label>Şehir:</label>
@@ -55,17 +60,35 @@
             </select>
             <div class="cinsiyet mb-3">
                 <label>Cinsiyet:</label>
-                <input type="radio" name="cinsiyet" v-model="form.cinsiyet">Erkek
-                <input type="radio" name="cinsiyet" v-model="form.cinsiyet">Kadın
+                <input type="radio" name="cinsiyet" v-model="form.cinsiyet" value="Erkek">Erkek
+                <input type="radio" name="cinsiyet" v-model="form.cinsiyet" value="Kadın">Kadın
 
+            </div>
+            <div class="mb-3">
+                <label class="form-label ">İlgi Alanlarınız:</label><br>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="ilgi[]" id="teknoloji" value="Teknoloji">
+                    <label class="form-check-label" for="teknoloji">Teknoloji</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="ilgi[]" id="spor" value="Spor">
+                    <label class="form-check-label" for="spor">Spor</label>
+                </div>
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="ilgi[]" id="sanat" value="Sanat">
+                    <label class="form-check-label" for="sanat">Sanat</label>
+                </div>
             </div>
             <div class="mb-3">
                 <label for="mesaj" class="form-label d-block">Mesajınız:</label>
                 <textarea name="mesaj" rows="3" class="form-kontrol" v-model="form.mesaj"></textarea>
             </div>
             <div class="text-center d-grid gap-2 col-12 mt-4">
-                <input type="button" class="javascript-buton" value="js ile denetle" onclick="validateJs()">
-                <input type="button" class="vue-buton" value="vue.js ile denetle" @click="validateVue">
+                <input type="button" class="javascript-buton" value="js ile denetle" onclick="validateJS()">
+                <input type="button" class="vue-buton" value="vue.js ile denetle" @click="validateVue()">
                 <input type="reset" class="temizle" value="Temizle">
                 <input type="submit" class="gonder" value="Gönder">
 

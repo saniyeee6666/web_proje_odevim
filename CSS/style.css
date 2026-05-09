@@ -1,5 +1,4 @@
-
-body.tasarım{
+body.tasarım {
     background-color: #da9ac6 !important;
 }
 
@@ -8,14 +7,14 @@ body.tasarım{
     margin-left: auto;
     margin-right: 0;
     background-color: #ffffff;
-    border-right: 5px solid #8d4747; 
+    border-right: 5px solid #8d4747;
 }
 
 
 .profil-kutu {
     margin-right: auto;
     margin-left: 0;
-    text-align: left; 
+    text-align: left;
 }
 
 .profil-img {
@@ -23,7 +22,7 @@ body.tasarım{
     width: 250px;
     height: 350px;
     border-radius: 50%;
-    object-fit:fill;
+    object-fit: fill;
     border: 6px solid white;
 }
 
@@ -31,86 +30,150 @@ body.tasarım{
     text-align: center;
     margin-bottom: 15px;
 }
-h1, h2, h3 {
+
+h1,
+h2,
+h3 {
     color: #070707 !important;
 }
 
 
 
 .navbar {
-    background-color: #ffffff !important; 
-    border-bottom: 3px solid #8d4747;   
+    background-color: #ffffff !important;
+    border-bottom: 3px solid #8d4747;
 }
 
 /*  Menü linklerini*/
-.navbar-brand, 
+.navbar-brand,
 .nav-link {
-    color: #112c4c !important; 
-    font-weight: 500;      
+    color: #112c4c !important;
+    font-weight: 500;
 }
 
 .nav-link:hover {
-    color: #ffffff !important;            /* Üzerine gelince beyaz olsun */
-    text-shadow: 0 0 5px #c77dff;         /* Hafif parlama efekti */
+    color: #ffffff !important;
+    /* Üzerine gelince beyaz olsun */
+    text-shadow: 0 0 5px #c77dff;
+    /* Hafif parlama efekti */
 }
 
-.ilgi-alanlari img{
-    height:100px;
-    width:200px;
-    margin-left:auto;
+.ilgi-alanlari img {
+    height: 100px;
+    width: 200px;
+    margin-left: auto;
     margin-right: auto;
 }
+
 .kart {
     min-height: 150px;
 
-    background-color: #ffffff; /* İçeriği dikeyde ortalar */
+    background-color: #ffffff;
+    /* İçeriği dikeyde ortalar */
 }
-body.sehir{
-    background-color:#da9ac6;
+
+body.iletisim {
+    background-color: #da9ac6;
+}
+
+body.login {
+    background-color: #da9ac6;
+}
+
+.btn-giris {
+    background-color: #a85886ec;
+    color: #ffffff;
+}
+
+body.sehir {
+    background-color: #da9ac6;
 }
 
 .resim-cerceve {
     background-color: white;
     padding: 15px;
     border-radius: 15px;
-    
 
-    max-width: 700px; 
-    margin: 20px auto; 
-    overflow: hidden; /* Taşmaları engeller */
+
+    max-width: 700px;
+    margin: 20px auto;
+    overflow: hidden;
+    /* Taşmaları engeller */
 }
-.resim-cerceve h5{
-    font-style:italic;
+
+.resim-cerceve h5 {
+    font-style: italic;
 }
 
 /* Çerçeve içindeki resimleri sabitleyen asıl kısım */
 .resim-cerceve img {
-    width: 100%;       /* Kutunun genişliğine yayıl */
-    height: 450px;     /* Yüksekliği hepsinde aynı yap (Veya istediğin bir değer) */
-    object-fit: cover; /* RESMİ BOZMADAN, en iyi şekilde sığdır (Kırpma yapar ama basıklaştırmaz) */
+    width: 100%;
+    /* Kutunun genişliğine yayıl */
+    height: 450px;
+    /* Yüksekliği hepsinde aynı yap (Veya istediğin bir değer) */
+    object-fit: cover;
+    /* RESMİ BOZMADAN, en iyi şekilde sığdır (Kırpma yapar ama basıklaştırmaz) */
     display: block;
     border-radius: 10px;
 }
+
 .eser {
-    display: flex;         /* Yan yana dizilmelerini sağlar */
-    align-items: center;   /* Dikeyde birbirlerine göre ortalar */
+    display: flex;
+    /* Yan yana dizilmelerini sağlar */
+    align-items: center;
+    /* Dikeyde birbirlerine göre ortalar */
     gap: 20px;
 }
+
 .eskihisar img {
-    height:600px;
-    width:600px;
+    height: 600px;
+    width: 600px;
 
 }
+
 .hisar {
-    height:600px;
-    width:500px;
+    height: 600px;
+    width: 500px;
 }
+
+.sehir-kart {
+    border: 1px solid #ddd;
+    margin: 10px;
+    background-color: white;
+    flex: 1;
+
+}
+
+.sehir-kart img {
+    width: 100%;
+    height: 600px;
+    object-fit: contain;
+}
+
+/* Slider'ın yan yana durması için Bootstrap d-flex kullanımı */
+.carousel-item {
+    display: none;
+}
+
+.carousel-item.active {
+    display: flex;
+    /* Aktifken kartları yan yana diz */
+    justify-content: center;
+}
+
+/* Okların belirgin olması için */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #333;
+    border-radius: 50%;
+}
+
 
 
 /* Özgeçmiş (CV) Sayfası Özel Stilleri */
-body.cv{
+body.cv {
 
-    
+
     /* Resim yüklenmezse diye yedek bir renk */
     background-color: #da9ac6 !important;
 
@@ -121,7 +184,7 @@ body.cv{
     margin-bottom: 30px;
     position: relative;
     padding-bottom: 10px;
-    color: #6e3a10; 
+    color: #6e3a10;
 }
 
 .baslik::after {
@@ -130,9 +193,9 @@ body.cv{
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    width: 220px; 
-    height: 3px; 
-    background-color: #0b78ab; 
+    width: 220px;
+    height: 3px;
+    background-color: #0b78ab;
 }
 
 .bilgi-kutusu {
@@ -140,9 +203,9 @@ body.cv{
     padding: 50px;
     border-radius: 10px;
     margin-bottom: 40px;
-    max-width:700px;
-    margin-left:auto;
-    margin-right:auto;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .text-center-custom {
