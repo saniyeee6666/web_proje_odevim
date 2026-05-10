@@ -14,7 +14,7 @@ function VerileriGetir(kategori) {
             .then(function(resp) { return resp.json(); }) // JSON formatına dönüştür
             .then(function(data) {
                 var html = "<div class='row'>";
-                for (var j = 0; j < 10; j++) { // İlk 6 film
+                for (var j = 0; j < 10; j++) { // İlk 10 film
                     html += "<div class='col-10 text-center'>";
                     html += "<img src='" + data[j].image.medium + "' class='img-fluid rounded'>";
                     html += "<p style='font-size:10px;'><b>" + data[j].name + "</b></p>";
@@ -47,7 +47,7 @@ function VerileriGetir(kategori) {
                 var html = "<div>";
                 var sonuclar = data.results;
                 for (var m = 0; m < sonuclar.length; m++) {
-                    html += "<div style='font-size:11px; border-bottom:1px solid #ddd; padding:5px;'>";
+                    html += "<div style='font-size:11px;'>";
                     html += "<b>" + sonuclar[m].trackName + "</b> - " + sonuclar[m].artistName;
                     html += "</div>";
                 }
