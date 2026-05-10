@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $sifre = $_POST['sifre'];
 
     $dogru_kullaniciadi = "b251210056@sakarya.edu.tr"; 
-    $dogru_sifre = "251210056"; 
+    $dogru_sifre = "b251210056"; 
 
     if ($kullanici_adi == $dogru_kullaniciadi && $sifre == $dogru_sifre) {
         echo "<h1>Hoşgeldiniz " . $dogru_sifre . "</h1>";
